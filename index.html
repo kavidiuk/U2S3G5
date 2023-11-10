@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back Office</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h2 class=" d-flex justify-content-center">Prodotti</h2>
+
+      <!-- Form for Creating/Updating Product -->
+      <form id="productForm">
+        <div class="form-group">
+          <label for="productName">Nome del prodotto</label>
+          <input type="text" class="form-control" id="productName" required />
+        </div>
+        <div class="form-group">
+          <label for="productPrice">Prezzo del prodotto </label>
+          <input type="number" class="form-control" id="productPrice" required />
+        </div>
+        <!-- Add other product details as needed -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+      </form>
+
+      <hr />
+
+      <!-- Display Products (Assuming a table for simplicity) -->
+      <h2>Product List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome del prodotto</th>
+            <th>Description</th>
+            <th>Brand</th>
+            <th>Prezzo del prodotto</th>
+            <th>_id</th>
+            <th>userId</th>
+            <th>createAt</th>
+            <th>updateAt</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody">
+          <!-- Product entries will be displayed here dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
